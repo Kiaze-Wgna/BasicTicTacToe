@@ -88,7 +88,7 @@ document.querySelectorAll('.select-button').forEach(button => {
                 unlocked=false
             }
             var dead = gameover()
-            if (dead) {
+            if ((dead) && (victory == 0)) {
                 title.innerHTML="<span>Game Over: Tie!</span>"
                 unlocked=false
             }
