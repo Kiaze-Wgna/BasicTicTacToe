@@ -39,7 +39,7 @@ html, body {
 }
 #navlogo{
     background-color: firebrick;
-    background-image: linear-gradient(to top, #ff0844 0%, #ffb1ff 100%);
+    background-image: linear-gradient(to top, #0061ff 0%, #60efff 100%);
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -116,8 +116,9 @@ html, body {
 .grid-container {
     display: grid;
     grid-template-columns: auto auto auto;
-    background-color: dodgerblue;
+    background-image: linear-gradient(to top, #00f2fe 0%, #4facfe 100%);
     padding: 5px;
+    margin-bottom: 1rem;
 }
 .grid-container div {
     background-color: #f1f1f1;
@@ -167,7 +168,7 @@ html, body {
 }
 .practice-button{
     font-size: 1.5rem;
-    background-image: linear-gradient(to top, #f77062 0%, #fe5196 100%);
+    background-image: linear-gradient(to top, #00f2fe 0%, #4facfe 100%);
     padding: 5px 10px;
     margin: 5px;
     border: none;
@@ -180,27 +181,29 @@ html, body {
     z-index: 1;
     display: flex;
 }
-.practice-question-class{
-    margin: 1rem;
-    font-size: 2rem;
-    font-weight: 700;
+.practice-button span {
+    position: relative;
+    z-index: 2;
+    color: black;
+    text-decoration: none;
+}
+.practice-button:after{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-image: linear-gradient(to top, #f77062 0%, #fe5196 100%);
+    transition: all 0.35s;
+    border-radius: 4px;
+    z-index: 1;
+}
+.practice-button:hover{
     color: #fff;
 }
-.practice-response-class{
-    align-self: center;
-    color: #fff;
-    width: 60%;
-    background-color: #525252;
-    border: none;
-    font-size: 25px;
-    margin-bottom: 25px;
-}
-.practice-answer-class{
-    display: flex;
-    color:white;
-    font-size: 1.3rem;
-    opacity: 0;
-    animation: fadeOut 7s forwards;
+.practice-button:hover:after{
+    width: 100%;
 }
 /* Footer section */
 .footer_container{
@@ -244,7 +247,7 @@ html, body {
     margin: 10px auto 10px auto;
 }
 .footer_logo{
-    background-image: linear-gradient(to top, #ff0844 0%, #ffb1ff 100%);
+    background-image: linear-gradient(to top, #0061ff 0%, #60efff 100%);
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
